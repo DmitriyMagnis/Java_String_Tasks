@@ -4,9 +4,11 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to String Tasks app");
 
-        String output = Corrector.handleData("onion",
+        String[] dataWithRemovedWords = Corrector.handleRemoveWord("onion",
                 new DataRepository().getWords()
         );
+
+        String output = Corrector.formatOutputData(dataWithRemovedWords);
 
         getOutput(output);
     }
